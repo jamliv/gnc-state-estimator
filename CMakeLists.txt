@@ -8,4 +8,10 @@ include_directories(include)
 
 add_executable(gnc_state_estimator
     src/main.cpp
+    src/truth_model.cpp
+)
+
+add_custom_target(sim 
+    COMMAND ./gnc_state_estimator
+    DEPENDS gnc_state_estimator
 )

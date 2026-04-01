@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/truth_model.h
+
+/home/jamlivdejo/gnc-state-estimator/src/truth_model.cpp
+truth_model.h
+/home/jamlivdejo/gnc-state-estimator/src/truth_model.h
+cmath
+-
+
