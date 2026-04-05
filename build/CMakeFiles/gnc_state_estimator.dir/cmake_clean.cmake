@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/gnc_state_estimator.dir/src/gps_sensor.cpp.o"
   "CMakeFiles/gnc_state_estimator.dir/src/main.cpp.o"
   "CMakeFiles/gnc_state_estimator.dir/src/truth_model.cpp.o"
   "gnc_state_estimator"

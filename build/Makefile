@@ -136,6 +136,33 @@ gnc_state_estimator/fast:
 	$(MAKE) -f CMakeFiles/gnc_state_estimator.dir/build.make CMakeFiles/gnc_state_estimator.dir/build
 .PHONY : gnc_state_estimator/fast
 
+src/gps_sensor.o: src/gps_sensor.cpp.o
+
+.PHONY : src/gps_sensor.o
+
+# target to build an object file
+src/gps_sensor.cpp.o:
+	$(MAKE) -f CMakeFiles/gnc_state_estimator.dir/build.make CMakeFiles/gnc_state_estimator.dir/src/gps_sensor.cpp.o
+.PHONY : src/gps_sensor.cpp.o
+
+src/gps_sensor.i: src/gps_sensor.cpp.i
+
+.PHONY : src/gps_sensor.i
+
+# target to preprocess a source file
+src/gps_sensor.cpp.i:
+	$(MAKE) -f CMakeFiles/gnc_state_estimator.dir/build.make CMakeFiles/gnc_state_estimator.dir/src/gps_sensor.cpp.i
+.PHONY : src/gps_sensor.cpp.i
+
+src/gps_sensor.s: src/gps_sensor.cpp.s
+
+.PHONY : src/gps_sensor.s
+
+# target to generate assembly for a file
+src/gps_sensor.cpp.s:
+	$(MAKE) -f CMakeFiles/gnc_state_estimator.dir/build.make CMakeFiles/gnc_state_estimator.dir/src/gps_sensor.cpp.s
+.PHONY : src/gps_sensor.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -200,6 +227,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... sim"
 	@echo "... gnc_state_estimator"
+	@echo "... src/gps_sensor.o"
+	@echo "... src/gps_sensor.i"
+	@echo "... src/gps_sensor.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
