@@ -6,12 +6,14 @@ set(CMAKE_CXX_STANDARD 17)
 
 include_directories(include)
 
-add_executable(gnc_state_estimator
+add_executable(sim
     src/main.cpp
     src/truth_model.cpp
+    src/gps_sensor.cpp
+    src/constellation.cpp
+    src/kalman_filter.cpp
 )
 
-add_custom_target(sim 
-    COMMAND ./gnc_state_estimator
-    DEPENDS gnc_state_estimator
+add_custom_target(run 
+    COMMAND ./sim
 )

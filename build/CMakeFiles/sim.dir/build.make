@@ -48,18 +48,100 @@ CMAKE_SOURCE_DIR = /home/jamlivdejo/gnc-state-estimator
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/jamlivdejo/gnc-state-estimator/build
 
-# Utility rule file for sim.
+# Include any dependencies generated for this target.
+include CMakeFiles/sim.dir/depend.make
 
 # Include the progress variables for this target.
 include CMakeFiles/sim.dir/progress.make
 
-CMakeFiles/sim: gnc_state_estimator
-	./gnc_state_estimator
+# Include the compile flags for this target's objects.
+include CMakeFiles/sim.dir/flags.make
 
-sim: CMakeFiles/sim
+CMakeFiles/sim.dir/src/main.cpp.o: CMakeFiles/sim.dir/flags.make
+CMakeFiles/sim.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sim.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sim.dir/src/main.cpp.o -c /home/jamlivdejo/gnc-state-estimator/src/main.cpp
+
+CMakeFiles/sim.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sim.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jamlivdejo/gnc-state-estimator/src/main.cpp > CMakeFiles/sim.dir/src/main.cpp.i
+
+CMakeFiles/sim.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jamlivdejo/gnc-state-estimator/src/main.cpp -o CMakeFiles/sim.dir/src/main.cpp.s
+
+CMakeFiles/sim.dir/src/truth_model.cpp.o: CMakeFiles/sim.dir/flags.make
+CMakeFiles/sim.dir/src/truth_model.cpp.o: ../src/truth_model.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sim.dir/src/truth_model.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sim.dir/src/truth_model.cpp.o -c /home/jamlivdejo/gnc-state-estimator/src/truth_model.cpp
+
+CMakeFiles/sim.dir/src/truth_model.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sim.dir/src/truth_model.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jamlivdejo/gnc-state-estimator/src/truth_model.cpp > CMakeFiles/sim.dir/src/truth_model.cpp.i
+
+CMakeFiles/sim.dir/src/truth_model.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim.dir/src/truth_model.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jamlivdejo/gnc-state-estimator/src/truth_model.cpp -o CMakeFiles/sim.dir/src/truth_model.cpp.s
+
+CMakeFiles/sim.dir/src/gps_sensor.cpp.o: CMakeFiles/sim.dir/flags.make
+CMakeFiles/sim.dir/src/gps_sensor.cpp.o: ../src/gps_sensor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sim.dir/src/gps_sensor.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sim.dir/src/gps_sensor.cpp.o -c /home/jamlivdejo/gnc-state-estimator/src/gps_sensor.cpp
+
+CMakeFiles/sim.dir/src/gps_sensor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sim.dir/src/gps_sensor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jamlivdejo/gnc-state-estimator/src/gps_sensor.cpp > CMakeFiles/sim.dir/src/gps_sensor.cpp.i
+
+CMakeFiles/sim.dir/src/gps_sensor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim.dir/src/gps_sensor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jamlivdejo/gnc-state-estimator/src/gps_sensor.cpp -o CMakeFiles/sim.dir/src/gps_sensor.cpp.s
+
+CMakeFiles/sim.dir/src/constellation.cpp.o: CMakeFiles/sim.dir/flags.make
+CMakeFiles/sim.dir/src/constellation.cpp.o: ../src/constellation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sim.dir/src/constellation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sim.dir/src/constellation.cpp.o -c /home/jamlivdejo/gnc-state-estimator/src/constellation.cpp
+
+CMakeFiles/sim.dir/src/constellation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sim.dir/src/constellation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jamlivdejo/gnc-state-estimator/src/constellation.cpp > CMakeFiles/sim.dir/src/constellation.cpp.i
+
+CMakeFiles/sim.dir/src/constellation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim.dir/src/constellation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jamlivdejo/gnc-state-estimator/src/constellation.cpp -o CMakeFiles/sim.dir/src/constellation.cpp.s
+
+CMakeFiles/sim.dir/src/kalman_filter.cpp.o: CMakeFiles/sim.dir/flags.make
+CMakeFiles/sim.dir/src/kalman_filter.cpp.o: ../src/kalman_filter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sim.dir/src/kalman_filter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sim.dir/src/kalman_filter.cpp.o -c /home/jamlivdejo/gnc-state-estimator/src/kalman_filter.cpp
+
+CMakeFiles/sim.dir/src/kalman_filter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sim.dir/src/kalman_filter.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jamlivdejo/gnc-state-estimator/src/kalman_filter.cpp > CMakeFiles/sim.dir/src/kalman_filter.cpp.i
+
+CMakeFiles/sim.dir/src/kalman_filter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim.dir/src/kalman_filter.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jamlivdejo/gnc-state-estimator/src/kalman_filter.cpp -o CMakeFiles/sim.dir/src/kalman_filter.cpp.s
+
+# Object files for target sim
+sim_OBJECTS = \
+"CMakeFiles/sim.dir/src/main.cpp.o" \
+"CMakeFiles/sim.dir/src/truth_model.cpp.o" \
+"CMakeFiles/sim.dir/src/gps_sensor.cpp.o" \
+"CMakeFiles/sim.dir/src/constellation.cpp.o" \
+"CMakeFiles/sim.dir/src/kalman_filter.cpp.o"
+
+# External object files for target sim
+sim_EXTERNAL_OBJECTS =
+
+sim: CMakeFiles/sim.dir/src/main.cpp.o
+sim: CMakeFiles/sim.dir/src/truth_model.cpp.o
+sim: CMakeFiles/sim.dir/src/gps_sensor.cpp.o
+sim: CMakeFiles/sim.dir/src/constellation.cpp.o
+sim: CMakeFiles/sim.dir/src/kalman_filter.cpp.o
 sim: CMakeFiles/sim.dir/build.make
-
-.PHONY : sim
+sim: CMakeFiles/sim.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable sim"
+	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sim.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 CMakeFiles/sim.dir/build: sim

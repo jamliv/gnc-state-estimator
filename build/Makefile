@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named run
+
+# Build rule for target.
+run: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run
+.PHONY : run
+
+# fast build rule for target.
+run/fast:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
+.PHONY : run/fast
+
+#=============================================================================
 # Target rules for targets named sim
 
 # Build rule for target.
@@ -123,18 +136,32 @@ sim/fast:
 	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/build
 .PHONY : sim/fast
 
-#=============================================================================
-# Target rules for targets named gnc_state_estimator
+src/constellation.o: src/constellation.cpp.o
 
-# Build rule for target.
-gnc_state_estimator: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gnc_state_estimator
-.PHONY : gnc_state_estimator
+.PHONY : src/constellation.o
 
-# fast build rule for target.
-gnc_state_estimator/fast:
-	$(MAKE) -f CMakeFiles/gnc_state_estimator.dir/build.make CMakeFiles/gnc_state_estimator.dir/build
-.PHONY : gnc_state_estimator/fast
+# target to build an object file
+src/constellation.cpp.o:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/constellation.cpp.o
+.PHONY : src/constellation.cpp.o
+
+src/constellation.i: src/constellation.cpp.i
+
+.PHONY : src/constellation.i
+
+# target to preprocess a source file
+src/constellation.cpp.i:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/constellation.cpp.i
+.PHONY : src/constellation.cpp.i
+
+src/constellation.s: src/constellation.cpp.s
+
+.PHONY : src/constellation.s
+
+# target to generate assembly for a file
+src/constellation.cpp.s:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/constellation.cpp.s
+.PHONY : src/constellation.cpp.s
 
 src/gps_sensor.o: src/gps_sensor.cpp.o
 
@@ -142,7 +169,7 @@ src/gps_sensor.o: src/gps_sensor.cpp.o
 
 # target to build an object file
 src/gps_sensor.cpp.o:
-	$(MAKE) -f CMakeFiles/gnc_state_estimator.dir/build.make CMakeFiles/gnc_state_estimator.dir/src/gps_sensor.cpp.o
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/gps_sensor.cpp.o
 .PHONY : src/gps_sensor.cpp.o
 
 src/gps_sensor.i: src/gps_sensor.cpp.i
@@ -151,7 +178,7 @@ src/gps_sensor.i: src/gps_sensor.cpp.i
 
 # target to preprocess a source file
 src/gps_sensor.cpp.i:
-	$(MAKE) -f CMakeFiles/gnc_state_estimator.dir/build.make CMakeFiles/gnc_state_estimator.dir/src/gps_sensor.cpp.i
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/gps_sensor.cpp.i
 .PHONY : src/gps_sensor.cpp.i
 
 src/gps_sensor.s: src/gps_sensor.cpp.s
@@ -160,8 +187,35 @@ src/gps_sensor.s: src/gps_sensor.cpp.s
 
 # target to generate assembly for a file
 src/gps_sensor.cpp.s:
-	$(MAKE) -f CMakeFiles/gnc_state_estimator.dir/build.make CMakeFiles/gnc_state_estimator.dir/src/gps_sensor.cpp.s
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/gps_sensor.cpp.s
 .PHONY : src/gps_sensor.cpp.s
+
+src/kalman_filter.o: src/kalman_filter.cpp.o
+
+.PHONY : src/kalman_filter.o
+
+# target to build an object file
+src/kalman_filter.cpp.o:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/kalman_filter.cpp.o
+.PHONY : src/kalman_filter.cpp.o
+
+src/kalman_filter.i: src/kalman_filter.cpp.i
+
+.PHONY : src/kalman_filter.i
+
+# target to preprocess a source file
+src/kalman_filter.cpp.i:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/kalman_filter.cpp.i
+.PHONY : src/kalman_filter.cpp.i
+
+src/kalman_filter.s: src/kalman_filter.cpp.s
+
+.PHONY : src/kalman_filter.s
+
+# target to generate assembly for a file
+src/kalman_filter.cpp.s:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/kalman_filter.cpp.s
+.PHONY : src/kalman_filter.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -169,7 +223,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/gnc_state_estimator.dir/build.make CMakeFiles/gnc_state_estimator.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -178,7 +232,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/gnc_state_estimator.dir/build.make CMakeFiles/gnc_state_estimator.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -187,7 +241,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/gnc_state_estimator.dir/build.make CMakeFiles/gnc_state_estimator.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/truth_model.o: src/truth_model.cpp.o
@@ -196,7 +250,7 @@ src/truth_model.o: src/truth_model.cpp.o
 
 # target to build an object file
 src/truth_model.cpp.o:
-	$(MAKE) -f CMakeFiles/gnc_state_estimator.dir/build.make CMakeFiles/gnc_state_estimator.dir/src/truth_model.cpp.o
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/truth_model.cpp.o
 .PHONY : src/truth_model.cpp.o
 
 src/truth_model.i: src/truth_model.cpp.i
@@ -205,7 +259,7 @@ src/truth_model.i: src/truth_model.cpp.i
 
 # target to preprocess a source file
 src/truth_model.cpp.i:
-	$(MAKE) -f CMakeFiles/gnc_state_estimator.dir/build.make CMakeFiles/gnc_state_estimator.dir/src/truth_model.cpp.i
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/truth_model.cpp.i
 .PHONY : src/truth_model.cpp.i
 
 src/truth_model.s: src/truth_model.cpp.s
@@ -214,7 +268,7 @@ src/truth_model.s: src/truth_model.cpp.s
 
 # target to generate assembly for a file
 src/truth_model.cpp.s:
-	$(MAKE) -f CMakeFiles/gnc_state_estimator.dir/build.make CMakeFiles/gnc_state_estimator.dir/src/truth_model.cpp.s
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/truth_model.cpp.s
 .PHONY : src/truth_model.cpp.s
 
 # Help Target
@@ -224,12 +278,18 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... run"
 	@echo "... edit_cache"
 	@echo "... sim"
-	@echo "... gnc_state_estimator"
+	@echo "... src/constellation.o"
+	@echo "... src/constellation.i"
+	@echo "... src/constellation.s"
 	@echo "... src/gps_sensor.o"
 	@echo "... src/gps_sensor.i"
 	@echo "... src/gps_sensor.s"
+	@echo "... src/kalman_filter.o"
+	@echo "... src/kalman_filter.i"
+	@echo "... src/kalman_filter.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

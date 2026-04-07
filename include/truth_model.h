@@ -1,3 +1,5 @@
+#ifndef TRUTH_MODEL_H
+#define TRUTH_MODEL_H
 
 // State structure that contains the position and velocity information for the current state
 struct state {
@@ -21,11 +23,13 @@ class simulation {
         // Destructor
         ~simulation();
 
+        state getState() const;
+
         // Propagate the simulation by dt
         state propagate();
 
         // Get current simulation time
-        double getTime();
+        double getTime() const;
 
         // Reset the simulation
         void reset();
@@ -44,3 +48,5 @@ class simulation {
 
 
 };
+
+#endif

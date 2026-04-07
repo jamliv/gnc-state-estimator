@@ -19,6 +19,10 @@ simulation::simulation(double x, double y, double vx, double vy, double ax, doub
 
 simulation::~simulation() {}
 
+state simulation::getState() const {
+    return {x, y};
+}
+
 state simulation::propagate() {
 
     // Add a timestep
@@ -39,7 +43,7 @@ state simulation::propagate() {
     return {x, y};
 }
 
-double simulation::getTime() {
+double simulation::getTime() const {
     return time;
 }
 

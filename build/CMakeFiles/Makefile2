@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = /home/jamlivdejo/gnc-state-estimator/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/gnc_state_estimator.dir/all
+all: CMakeFiles/sim.dir/all
 
 .PHONY : all
 
@@ -63,24 +63,51 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/run.dir/clean
 clean: CMakeFiles/sim.dir/clean
-clean: CMakeFiles/gnc_state_estimator.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/run.dir
+
+# All Build rule for target.
+CMakeFiles/run.dir/all:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/depend
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles --progress-num= "Built target run"
+.PHONY : CMakeFiles/run.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/run.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/run.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles 0
+.PHONY : CMakeFiles/run.dir/rule
+
+# Convenience name for target.
+run: CMakeFiles/run.dir/rule
+
+.PHONY : run
+
+# clean rule for target.
+CMakeFiles/run.dir/clean:
+	$(MAKE) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/clean
+.PHONY : CMakeFiles/run.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/sim.dir
 
 # All Build rule for target.
-CMakeFiles/sim.dir/all: CMakeFiles/gnc_state_estimator.dir/all
+CMakeFiles/sim.dir/all:
 	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/depend
 	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles --progress-num= "Built target sim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target sim"
 .PHONY : CMakeFiles/sim.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sim.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sim.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles 0
 .PHONY : CMakeFiles/sim.dir/rule
@@ -94,33 +121,6 @@ sim: CMakeFiles/sim.dir/rule
 CMakeFiles/sim.dir/clean:
 	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/clean
 .PHONY : CMakeFiles/sim.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/gnc_state_estimator.dir
-
-# All Build rule for target.
-CMakeFiles/gnc_state_estimator.dir/all:
-	$(MAKE) -f CMakeFiles/gnc_state_estimator.dir/build.make CMakeFiles/gnc_state_estimator.dir/depend
-	$(MAKE) -f CMakeFiles/gnc_state_estimator.dir/build.make CMakeFiles/gnc_state_estimator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles --progress-num=1,2,3,4 "Built target gnc_state_estimator"
-.PHONY : CMakeFiles/gnc_state_estimator.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/gnc_state_estimator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/gnc_state_estimator.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles 0
-.PHONY : CMakeFiles/gnc_state_estimator.dir/rule
-
-# Convenience name for target.
-gnc_state_estimator: CMakeFiles/gnc_state_estimator.dir/rule
-
-.PHONY : gnc_state_estimator
-
-# clean rule for target.
-CMakeFiles/gnc_state_estimator.dir/clean:
-	$(MAKE) -f CMakeFiles/gnc_state_estimator.dir/build.make CMakeFiles/gnc_state_estimator.dir/clean
-.PHONY : CMakeFiles/gnc_state_estimator.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
