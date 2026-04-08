@@ -1,0 +1,69 @@
+[0] Simulation Start
+[0.5] GPS Measurement Acquired
+[0.5] Kalman Filter Updated with GPS Measurement
+[1] GPS Lock Failure
+[1.5] GPS Lock Failure
+[2] GPS Measurement Acquired
+[2] Kalman Filter Updated with GPS Measurement
+[2.5] GPS Measurement Acquired
+[2.5] Kalman Filter Updated with GPS Measurement
+[3] GPS Lock Failure
+[3.5] GPS Measurement Acquired
+[3.5] Kalman Filter Updated with GPS Measurement
+[4] GPS Measurement Acquired
+[4] Kalman Filter Updated with GPS Measurement
+[4.5] GPS Lock Failure
+[5] GPS Measurement Acquired
+[5] Kalman Filter Updated with GPS Measurement
+[5.5] GPS Measurement Acquired
+[5.5] Kalman Filter Updated with GPS Measurement
+[6] GPS Measurement Acquired
+[6] Kalman Filter Updated with GPS Measurement
+[6.5] GPS Measurement Acquired
+[6.5] Kalman Filter Updated with GPS Measurement
+[7] GPS Measurement Acquired
+[7] Kalman Filter Updated with GPS Measurement
+[7.5] GPS Measurement Acquired
+[7.5] Kalman Filter Updated with GPS Measurement
+[8] GPS Lock Failure
+[8.5] GPS Measurement Acquired
+[8.5] Kalman Filter Updated with GPS Measurement
+[9] GPS Measurement Acquired
+[9] Kalman Filter Updated with GPS Measurement
+[9.5] GPS Measurement Acquired
+[9.5] Kalman Filter Updated with GPS Measurement
+[10] GPS Lock Failure
+[10.5] GPS Measurement Acquired
+[10.5] Kalman Filter Updated with GPS Measurement
+[11] GPS Measurement Acquired
+[11] Kalman Filter Updated with GPS Measurement
+[11.5] GPS Lock Failure
+[12] GPS Lock Failure
+[12.5] GPS Measurement Acquired
+[12.5] Kalman Filter Updated with GPS Measurement
+[13] GPS Lock Failure
+[13.5] GPS Lock Failure
+[14] GPS Measurement Acquired
+[14] Kalman Filter Updated with GPS Measurement
+[14.5] GPS Measurement Acquired
+[14.5] Kalman Filter Updated with GPS Measurement
+[15] GPS Lock Failure
+[15.5] GPS Measurement Acquired
+[15.5] Kalman Filter Updated with GPS Measurement
+[16] GPS Measurement Acquired
+[16] Kalman Filter Updated with GPS Measurement
+[16.5] GPS Lock Failure
+[17] GPS Measurement Acquired
+[17] Kalman Filter Updated with GPS Measurement
+[17.5] GPS Measurement Acquired
+[17.5] Kalman Filter Updated with GPS Measurement
+[18] GPS Measurement Acquired
+[18] Kalman Filter Updated with GPS Measurement
+[18.5] GPS Measurement Acquired
+[18.5] Kalman Filter Updated with GPS Measurement
+[19] GPS Measurement Acquired
+[19] Kalman Filter Updated with GPS Measurement
+[19.5] GPS Measurement Acquired
+[19.5] Kalman Filter Updated with GPS Measurement
+[20] GPS Lock Failure
+[20] Simulation Complete

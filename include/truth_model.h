@@ -7,6 +7,13 @@ struct state {
     double y;
 };
 
+struct truthState {
+    double x;
+    double y;
+    double vx;
+    double vy;
+};
+
 // Truth Model of the Vehicle
 class simulation {
     public:
@@ -15,7 +22,7 @@ class simulation {
         simulation();
 
         // Constructor (Only dt set)
-        simulation(float dt);
+        simulation(double dt);
 
         // Contructor (All Params)
         simulation (double x, double y, double vx, double vy, double ax, double ay, double dt);
@@ -25,8 +32,10 @@ class simulation {
 
         state getState() const;
 
+        truthState getTruthState() const;
+
         // Propagate the simulation by dt
-        state propagate();
+        void propagate();
 
         // Get current simulation time
         double getTime() const;
@@ -39,12 +48,12 @@ class simulation {
         // Pos, Vel, Acc, and Time variables
         double x = 0;
         double y = 0;
-        double vx = 0;
-        double vy = 0;
+        double vx = 1;
+        double vy = 0.5;
         double ax = 0;
         double ay = 0;
         double time = 0; 
-        float dt = 0.1;
+        double dt = 0.1;
 
 
 };

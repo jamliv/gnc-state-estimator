@@ -1,8 +1,7 @@
 #include "kalman_filter.h"
 #include <iostream>
-using namespace std;
 
-KalmanFilter::KalmanFilter(float dt, double sigmaA, double sigmaGPS) : dt(dt), initialized(false) {
+KalmanFilter::KalmanFilter(double dt, double sigmaA, double sigmaGPS) : dt(dt), initialized(false) {
 
     // Create F Matrix
     F << 1, 0, dt, 0,
@@ -35,27 +34,45 @@ KalmanFilter::KalmanFilter(float dt, double sigmaA, double sigmaGPS) : dt(dt), i
     // Create R Matrix
     R << gpsSigmaPow2, 0,
          0, gpsSigmaPow2;
+
+    // Initialize Innovation to Dummy Numbers
+    innovation << 0, 0;
 }
 
 KalmanFilter::~KalmanFilter() {}
 
+// TODO: Think of a better solution for this
 void KalmanFilter::step() {
 
+    // Initialization check
     if (!initialized) {
-        cout << "ERROR: Kalman Filter not initialized." << endl;
+        throw std::runtime_error("Kalman Filter not initialized.");
         return;
     }
 
+    // Make prediction
     predict();
 }
 
 void KalmanFilter::step(double xGPS, double yGPS) {
+
+    // Call step()
     step();
+
+    // Update prediction
     update(xGPS, yGPS);
 }
 
 Eigen::Vector4d KalmanFilter::getState() const {
     return xHat;
+}
+
+Eigen::Matrix4d KalmanFilter::getCovariance() const {
+    return P;
+}
+
+Eigen::Vector2d KalmanFilter::getInnovation() const {
+    return innovation;
 }
 
 void KalmanFilter::initialize(double x0, double y0, double sigmaPos, double sigmaVel) {
@@ -79,8 +96,10 @@ void KalmanFilter::initialize(double x0, double y0, double sigmaPos, double sigm
 
 void KalmanFilter::predict() {
 
+    // Predict the new state
     xHat = F * xHat;
 
+    // Update Covariance Matrix
     P = F * P * F.transpose() + Q;
 }
 
@@ -91,7 +110,7 @@ void KalmanFilter::update(double xGPS, double yGPS) {
     gpsMeasurement << xGPS, yGPS;
 
     // Calculate innovation (measurement residual)
-    Eigen::Vector2d innovation = gpsMeasurement - H * xHat;
+    innovation = gpsMeasurement - H * xHat;
 
     // Create a matrix for part of the function 
     Eigen::Matrix2d partial = H * P * H.transpose() + R;

@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/sim.dir/src/main.cpp.o CMakeFiles/sim.dir/src/truth_model.cpp.o CMakeFiles/sim.dir/src/gps_sensor.cpp.o CMakeFiles/sim.dir/src/constellation.cpp.o CMakeFiles/sim.dir/src/kalman_filter.cpp.o  -o sim 
+/usr/bin/c++     CMakeFiles/sim.dir/src/main.cpp.o CMakeFiles/sim.dir/src/truth_model.cpp.o CMakeFiles/sim.dir/src/gps_sensor.cpp.o CMakeFiles/sim.dir/src/constellation.cpp.o CMakeFiles/sim.dir/src/kalman_filter.cpp.o CMakeFiles/sim.dir/src/logger.cpp.o  -o sim 

@@ -12,6 +12,16 @@ CMakeFiles/sim.dir/src/gps_sensor.cpp.o: ../src/gps_sensor.cpp
 CMakeFiles/sim.dir/src/kalman_filter.cpp.o: ../include/kalman_filter.h
 CMakeFiles/sim.dir/src/kalman_filter.cpp.o: ../src/kalman_filter.cpp
 
+CMakeFiles/sim.dir/src/logger.cpp.o: ../include/kalman_filter.h
+CMakeFiles/sim.dir/src/logger.cpp.o: ../include/logger.h
+CMakeFiles/sim.dir/src/logger.cpp.o: ../include/truth_model.h
+CMakeFiles/sim.dir/src/logger.cpp.o: ../src/logger.cpp
+
+CMakeFiles/sim.dir/src/main.cpp.o: ../include/constellation.h
+CMakeFiles/sim.dir/src/main.cpp.o: ../include/gps_sensor.h
+CMakeFiles/sim.dir/src/main.cpp.o: ../include/kalman_filter.h
+CMakeFiles/sim.dir/src/main.cpp.o: ../include/logger.h
+CMakeFiles/sim.dir/src/main.cpp.o: ../include/truth_model.h
 CMakeFiles/sim.dir/src/main.cpp.o: ../src/main.cpp
 
 CMakeFiles/sim.dir/src/truth_model.cpp.o: ../include/truth_model.h

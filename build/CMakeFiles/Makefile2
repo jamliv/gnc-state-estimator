@@ -64,6 +64,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/run.dir/clean
+clean: CMakeFiles/cleanlogs.dir/clean
 clean: CMakeFiles/sim.dir/clean
 
 .PHONY : clean
@@ -96,18 +97,45 @@ CMakeFiles/run.dir/clean:
 .PHONY : CMakeFiles/run.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/cleanlogs.dir
+
+# All Build rule for target.
+CMakeFiles/cleanlogs.dir/all:
+	$(MAKE) -f CMakeFiles/cleanlogs.dir/build.make CMakeFiles/cleanlogs.dir/depend
+	$(MAKE) -f CMakeFiles/cleanlogs.dir/build.make CMakeFiles/cleanlogs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles --progress-num= "Built target cleanlogs"
+.PHONY : CMakeFiles/cleanlogs.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/cleanlogs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/cleanlogs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles 0
+.PHONY : CMakeFiles/cleanlogs.dir/rule
+
+# Convenience name for target.
+cleanlogs: CMakeFiles/cleanlogs.dir/rule
+
+.PHONY : cleanlogs
+
+# clean rule for target.
+CMakeFiles/cleanlogs.dir/clean:
+	$(MAKE) -f CMakeFiles/cleanlogs.dir/build.make CMakeFiles/cleanlogs.dir/clean
+.PHONY : CMakeFiles/cleanlogs.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/sim.dir
 
 # All Build rule for target.
 CMakeFiles/sim.dir/all:
 	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/depend
 	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target sim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target sim"
 .PHONY : CMakeFiles/sim.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sim.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sim.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles 0
 .PHONY : CMakeFiles/sim.dir/rule

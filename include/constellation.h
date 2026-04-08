@@ -3,7 +3,6 @@
 
 #include <vector>
 
-using namespace std;
 const double PI = 3.141592653589793;
 
 class satellite {
@@ -132,7 +131,7 @@ class constellation {
         /**
         * @brief Vector of satellites in the constellation
         */
-        vector<satellite> satellites;
+        std::vector<satellite> satellites;
 
         //====================================================//
         //                    FUNCTIONS                       //

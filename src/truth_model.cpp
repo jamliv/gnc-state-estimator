@@ -3,7 +3,7 @@
 
 simulation::simulation() {}
 
-simulation::simulation(float dt) {
+simulation::simulation(double dt) {
     this->dt = dt;
 }
 
@@ -23,7 +23,11 @@ state simulation::getState() const {
     return {x, y};
 }
 
-state simulation::propagate() {
+truthState simulation::getTruthState() const {
+    return {x, y, vx, vy};
+}
+
+void simulation::propagate() {
 
     // Add a timestep
     time += dt;
@@ -39,8 +43,6 @@ state simulation::propagate() {
     // Calculate current velocity
     vx += ax * dt;
     vy += ay * dt;
-
-    return {x, y};
 }
 
 double simulation::getTime() const {

@@ -18,11 +18,11 @@ class KalmanFilter {
          * 
          * Constructs F, H, Q (based on sigmaA), and R (based on sigmaGPS).
          * 
-         * @param dt Time Step [float]
+         * @param dt Time Step [double]
          * @param sigmaA Standard Deviation of Acceleration Error [double]
          * @param sigmaGPS Standard Deviation of GPS Error/Noise [double]
          */
-        KalmanFilter(float dt, double sigmaA, double sigmaGPS);
+        KalmanFilter(double dt, double sigmaA, double sigmaGPS);
 
         /**
          * @brief Destroy the Kalman Filter object
@@ -57,6 +57,20 @@ class KalmanFilter {
          */
         Eigen::Vector4d getState() const;
 
+        /**
+         * @brief Get the Covariance Matrix, P
+         * 
+         * @return Eigen::Matrix4d 
+         */
+        Eigen::Matrix4d getCovariance() const;
+
+        /**
+         * @brief Get the Innovation Matrix
+         * 
+         * @return Eigen::Vector2d
+         */
+        Eigen::Vector2d getInnovation() const;
+
 
     private:
 
@@ -80,7 +94,7 @@ class KalmanFilter {
          * @brief Time step used by Kalman Filter
          * 
          */
-        float dt;
+        double dt;
 
         /**
          * @brief Checks if the State Vector and Covariance Matrix have been initialized
@@ -121,6 +135,16 @@ class KalmanFilter {
          * 
          */
         Eigen::Matrix<double, 2, 4> H;
+
+        /**
+         * @brief Innovation Vector
+         * 
+         * Difference between the actual measurement and the predicted measurement (z - Hx).
+         * Represents how much the filter's prediction disagrees with the sensor.
+         * Used to correct the state estimate during the update step.
+         * 
+         */
+        Eigen::Vector2d innovation;
 
         //====================================================//
         //                    FUNCTIONS                       //

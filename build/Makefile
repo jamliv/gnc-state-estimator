@@ -124,6 +124,19 @@ run/fast:
 .PHONY : run/fast
 
 #=============================================================================
+# Target rules for targets named cleanlogs
+
+# Build rule for target.
+cleanlogs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cleanlogs
+.PHONY : cleanlogs
+
+# fast build rule for target.
+cleanlogs/fast:
+	$(MAKE) -f CMakeFiles/cleanlogs.dir/build.make CMakeFiles/cleanlogs.dir/build
+.PHONY : cleanlogs/fast
+
+#=============================================================================
 # Target rules for targets named sim
 
 # Build rule for target.
@@ -217,6 +230,33 @@ src/kalman_filter.cpp.s:
 	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/kalman_filter.cpp.s
 .PHONY : src/kalman_filter.cpp.s
 
+src/logger.o: src/logger.cpp.o
+
+.PHONY : src/logger.o
+
+# target to build an object file
+src/logger.cpp.o:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/logger.cpp.o
+.PHONY : src/logger.cpp.o
+
+src/logger.i: src/logger.cpp.i
+
+.PHONY : src/logger.i
+
+# target to preprocess a source file
+src/logger.cpp.i:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/logger.cpp.i
+.PHONY : src/logger.cpp.i
+
+src/logger.s: src/logger.cpp.s
+
+.PHONY : src/logger.s
+
+# target to generate assembly for a file
+src/logger.cpp.s:
+	$(MAKE) -f CMakeFiles/sim.dir/build.make CMakeFiles/sim.dir/src/logger.cpp.s
+.PHONY : src/logger.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -280,6 +320,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... run"
 	@echo "... edit_cache"
+	@echo "... cleanlogs"
 	@echo "... sim"
 	@echo "... src/constellation.o"
 	@echo "... src/constellation.i"
@@ -290,6 +331,9 @@ help:
 	@echo "... src/kalman_filter.o"
 	@echo "... src/kalman_filter.i"
 	@echo "... src/kalman_filter.s"
+	@echo "... src/logger.o"
+	@echo "... src/logger.i"
+	@echo "... src/logger.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
