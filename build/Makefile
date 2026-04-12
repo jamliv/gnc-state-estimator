@@ -111,6 +111,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named bunall
+
+# Build rule for target.
+bunall: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bunall
+.PHONY : bunall
+
+# fast build rule for target.
+bunall/fast:
+	$(MAKE) -f CMakeFiles/bunall.dir/build.make CMakeFiles/bunall.dir/build
+.PHONY : bunall/fast
+
+#=============================================================================
+# Target rules for targets named python
+
+# Build rule for target.
+python: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 python
+.PHONY : python
+
+# fast build rule for target.
+python/fast:
+	$(MAKE) -f CMakeFiles/python.dir/build.make CMakeFiles/python.dir/build
+.PHONY : python/fast
+
+#=============================================================================
+# Target rules for targets named runall
+
+# Build rule for target.
+runall: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 runall
+.PHONY : runall
+
+# fast build rule for target.
+runall/fast:
+	$(MAKE) -f CMakeFiles/runall.dir/build.make CMakeFiles/runall.dir/build
+.PHONY : runall/fast
+
+#=============================================================================
 # Target rules for targets named run
 
 # Build rule for target.
@@ -124,17 +163,30 @@ run/fast:
 .PHONY : run/fast
 
 #=============================================================================
-# Target rules for targets named cleanlogs
+# Target rules for targets named cleanall
 
 # Build rule for target.
-cleanlogs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cleanlogs
-.PHONY : cleanlogs
+cleanall: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cleanall
+.PHONY : cleanall
 
 # fast build rule for target.
-cleanlogs/fast:
-	$(MAKE) -f CMakeFiles/cleanlogs.dir/build.make CMakeFiles/cleanlogs.dir/build
-.PHONY : cleanlogs/fast
+cleanall/fast:
+	$(MAKE) -f CMakeFiles/cleanall.dir/build.make CMakeFiles/cleanall.dir/build
+.PHONY : cleanall/fast
+
+#=============================================================================
+# Target rules for targets named cleanout
+
+# Build rule for target.
+cleanout: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cleanout
+.PHONY : cleanout
+
+# fast build rule for target.
+cleanout/fast:
+	$(MAKE) -f CMakeFiles/cleanout.dir/build.make CMakeFiles/cleanout.dir/build
+.PHONY : cleanout/fast
 
 #=============================================================================
 # Target rules for targets named sim
@@ -318,9 +370,13 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... bunall"
+	@echo "... python"
+	@echo "... runall"
 	@echo "... run"
+	@echo "... cleanall"
+	@echo "... cleanout"
 	@echo "... edit_cache"
-	@echo "... cleanlogs"
 	@echo "... sim"
 	@echo "... src/constellation.o"
 	@echo "... src/constellation.i"

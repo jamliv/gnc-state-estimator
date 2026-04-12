@@ -63,11 +63,96 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/bunall.dir/clean
+clean: CMakeFiles/python.dir/clean
+clean: CMakeFiles/runall.dir/clean
 clean: CMakeFiles/run.dir/clean
-clean: CMakeFiles/cleanlogs.dir/clean
+clean: CMakeFiles/cleanall.dir/clean
+clean: CMakeFiles/cleanout.dir/clean
 clean: CMakeFiles/sim.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/bunall.dir
+
+# All Build rule for target.
+CMakeFiles/bunall.dir/all: CMakeFiles/sim.dir/all
+	$(MAKE) -f CMakeFiles/bunall.dir/build.make CMakeFiles/bunall.dir/depend
+	$(MAKE) -f CMakeFiles/bunall.dir/build.make CMakeFiles/bunall.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles --progress-num= "Built target bunall"
+.PHONY : CMakeFiles/bunall.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/bunall.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/bunall.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles 0
+.PHONY : CMakeFiles/bunall.dir/rule
+
+# Convenience name for target.
+bunall: CMakeFiles/bunall.dir/rule
+
+.PHONY : bunall
+
+# clean rule for target.
+CMakeFiles/bunall.dir/clean:
+	$(MAKE) -f CMakeFiles/bunall.dir/build.make CMakeFiles/bunall.dir/clean
+.PHONY : CMakeFiles/bunall.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/python.dir
+
+# All Build rule for target.
+CMakeFiles/python.dir/all:
+	$(MAKE) -f CMakeFiles/python.dir/build.make CMakeFiles/python.dir/depend
+	$(MAKE) -f CMakeFiles/python.dir/build.make CMakeFiles/python.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles --progress-num= "Built target python"
+.PHONY : CMakeFiles/python.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/python.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/python.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles 0
+.PHONY : CMakeFiles/python.dir/rule
+
+# Convenience name for target.
+python: CMakeFiles/python.dir/rule
+
+.PHONY : python
+
+# clean rule for target.
+CMakeFiles/python.dir/clean:
+	$(MAKE) -f CMakeFiles/python.dir/build.make CMakeFiles/python.dir/clean
+.PHONY : CMakeFiles/python.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/runall.dir
+
+# All Build rule for target.
+CMakeFiles/runall.dir/all: CMakeFiles/run.dir/all
+	$(MAKE) -f CMakeFiles/runall.dir/build.make CMakeFiles/runall.dir/depend
+	$(MAKE) -f CMakeFiles/runall.dir/build.make CMakeFiles/runall.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles --progress-num= "Built target runall"
+.PHONY : CMakeFiles/runall.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/runall.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/runall.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles 0
+.PHONY : CMakeFiles/runall.dir/rule
+
+# Convenience name for target.
+runall: CMakeFiles/runall.dir/rule
+
+.PHONY : runall
+
+# clean rule for target.
+CMakeFiles/runall.dir/clean:
+	$(MAKE) -f CMakeFiles/runall.dir/build.make CMakeFiles/runall.dir/clean
+.PHONY : CMakeFiles/runall.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/run.dir
@@ -97,31 +182,58 @@ CMakeFiles/run.dir/clean:
 .PHONY : CMakeFiles/run.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/cleanlogs.dir
+# Target rules for target CMakeFiles/cleanall.dir
 
 # All Build rule for target.
-CMakeFiles/cleanlogs.dir/all:
-	$(MAKE) -f CMakeFiles/cleanlogs.dir/build.make CMakeFiles/cleanlogs.dir/depend
-	$(MAKE) -f CMakeFiles/cleanlogs.dir/build.make CMakeFiles/cleanlogs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles --progress-num= "Built target cleanlogs"
-.PHONY : CMakeFiles/cleanlogs.dir/all
+CMakeFiles/cleanall.dir/all: CMakeFiles/cleanout.dir/all
+	$(MAKE) -f CMakeFiles/cleanall.dir/build.make CMakeFiles/cleanall.dir/depend
+	$(MAKE) -f CMakeFiles/cleanall.dir/build.make CMakeFiles/cleanall.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles --progress-num= "Built target cleanall"
+.PHONY : CMakeFiles/cleanall.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/cleanlogs.dir/rule: cmake_check_build_system
+CMakeFiles/cleanall.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/cleanlogs.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/cleanall.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles 0
-.PHONY : CMakeFiles/cleanlogs.dir/rule
+.PHONY : CMakeFiles/cleanall.dir/rule
 
 # Convenience name for target.
-cleanlogs: CMakeFiles/cleanlogs.dir/rule
+cleanall: CMakeFiles/cleanall.dir/rule
 
-.PHONY : cleanlogs
+.PHONY : cleanall
 
 # clean rule for target.
-CMakeFiles/cleanlogs.dir/clean:
-	$(MAKE) -f CMakeFiles/cleanlogs.dir/build.make CMakeFiles/cleanlogs.dir/clean
-.PHONY : CMakeFiles/cleanlogs.dir/clean
+CMakeFiles/cleanall.dir/clean:
+	$(MAKE) -f CMakeFiles/cleanall.dir/build.make CMakeFiles/cleanall.dir/clean
+.PHONY : CMakeFiles/cleanall.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/cleanout.dir
+
+# All Build rule for target.
+CMakeFiles/cleanout.dir/all:
+	$(MAKE) -f CMakeFiles/cleanout.dir/build.make CMakeFiles/cleanout.dir/depend
+	$(MAKE) -f CMakeFiles/cleanout.dir/build.make CMakeFiles/cleanout.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles --progress-num= "Built target cleanout"
+.PHONY : CMakeFiles/cleanout.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/cleanout.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/cleanout.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles 0
+.PHONY : CMakeFiles/cleanout.dir/rule
+
+# Convenience name for target.
+cleanout: CMakeFiles/cleanout.dir/rule
+
+.PHONY : cleanout
+
+# clean rule for target.
+CMakeFiles/cleanout.dir/clean:
+	$(MAKE) -f CMakeFiles/cleanout.dir/build.make CMakeFiles/cleanout.dir/clean
+.PHONY : CMakeFiles/cleanout.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/sim.dir

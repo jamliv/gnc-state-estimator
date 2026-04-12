@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "../data/SIM_LOG.txt"
-  "../data/SIM_RUN_DATA.csv"
   "CMakeFiles/sim.dir/src/constellation.cpp.o"
   "CMakeFiles/sim.dir/src/gps_sensor.cpp.o"
   "CMakeFiles/sim.dir/src/kalman_filter.cpp.o"

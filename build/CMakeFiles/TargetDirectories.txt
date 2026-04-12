@@ -1,5 +1,9 @@
 /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles/rebuild_cache.dir
+/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles/bunall.dir
+/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles/python.dir
+/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles/runall.dir
 /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles/run.dir
+/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles/cleanall.dir
+/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles/cleanout.dir
 /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles/edit_cache.dir
-/home/jamlivdejo/gnc-state-estimator/build/CMakeFiles/cleanlogs.dir
 /home/jamlivdejo/gnc-state-estimator/build/CMakeFiles/sim.dir
